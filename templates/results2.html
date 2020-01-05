@@ -1,0 +1,60 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+    .map{
+         display: flex;
+        justify-content: center;
+
+
+    }
+   </style>
+<!--返回按钮-->
+    <div>
+        <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回上一页"class="icon-reply btn-default btn btn-danger">
+    </div>
+<!--end-->
+<h2>{{the_title}}</h2><!--网页标题-->
+
+{#<form method="GET" action="/">#}
+{#<p><input name="the_region_selected" value='首页' type='SUBMIT'></p>#}
+{#</form>#}
+{##}
+
+<!--显示动图-->
+
+    <div class="map">
+{#        <div>{{ the_plot_all|safe }}</div>#}
+        <div>{{ the_plot_all_1|safe }}</div><!--显示后端的图-->
+
+    </div>
+    <table>
+
+        {% for log_row in the_list %}<!--从后端获取的数据，在每一行利用for循环遍历每一个嵌套列表-->
+            <tr>
+                {% for item in log_row %}<!--每个单元格循环遍历每一个嵌套列表里的元素-->
+                    <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <style>
+        table {
+            display: flex;
+            justify-content: center;
+
+            margin-top:50px;
+            font-size: 15px;
+            }
+   td{
+        box-sizing: border-box;
+        border:deepskyblue 2px dashed;
+    }
+    </style>
+{% endblock %}
