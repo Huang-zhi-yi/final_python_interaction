@@ -1,7 +1,8 @@
 # final_python_interaction
 ## 2019第一学期python交互项目
 ### [pythonanywhere页面](http://lixintao.pythonanywhere.com/)
-### 基本介绍：网页有7个URl：endpoint分别是 / 、/world、/world_hbl、/world_death_person、/world_lung、/tobacco、/field
+### 基本介绍：
+* 网页有7个URl：endpoint分别是 / 、/world、/world_hbl、/world_death_person、/world_lung、/tobacco、/field
 ## 后端
 1. 使用if、elif的条件判断语句以打开不同的图表文件功能
 2. 使用for循环，遍历含有复杂数据的嵌套列表，并返回一个表格
@@ -11,6 +12,7 @@
 6. 使用flask模块的request.form()接受前端页面传来的表单数据，render_template()函数返回一个HTML页面和页面标题、表格数据
 7. 引用了pandas、pyecharts、prettytable第三方模块
 8. 利用''.join()函数把列表转化为字符串
+9. 使用下拉框功能可以实现在同一个url下查看不同的表
 ## 前端
 1. 使用了flask框架和jinji2模板，通过extends指令实现模板继承，实现了python后端与前端页面分离
 2. 使用了boostrap前端框架的按钮、网格系统、导航栏下拉框和轮播图
